@@ -13,10 +13,10 @@ const MealDetails = () => {
 
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-      {/* <div className='flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto'>
+      <div className='flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto'>
         <div className=' lg:w-1/2'>
           <img
-            src={strMealThumb}
+            src={location.state.photo}
             alt=''
             className='object-cover w-full  h-80 lg:h-full'
           />
@@ -24,36 +24,28 @@ const MealDetails = () => {
         <div className='flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2'>
           <div>
             <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-400'>
-              Brand new
+              {location.state.Category}
             </p>
           </div>
           <h5 className='mb-3 text-3xl font-extrabold leading-none sm:text-4xl'>
-            {strMeal}
+            {location.state.mealName}
           </h5>
           <p className='mb-5 text-gray-900'>
-            Authors: {authors.substring(0, 50)}
+            {location.state.details.substring(0, 200)}...
           </p>
-          <p className='mb-5 text-gray-900'>Publisher: {publisher}</p>
-          <p className='mb-5 text-gray-900'>Year: {year}</p>
-          <p className='mb-5 text-gray-900'>Rating: {rating}</p>
-          <p className='mb-5 text-gray-800'>{desc.substring(0, 150)}...</p>
-          <div className='flex items-center'>
-            <a href={pdf && Object.values(pdf)[0]}>
-              <button
-                type='submit'
-                className='inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'>
-                {pdf ? "Download PDF" : "Not Available"}
-              </button>
-            </a>
-            <p className='inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800'>
-              Price: {price}
-            </p>
-          </div>
+          <p className='mb-5 text-gray-900'>
+            Category: {location.state.Category}
+          </p>
+
+          <p className='mb-5 text-gray-900'>
+            Main Ingredient: {location.state.main}
+          </p>
+          <p className='mb-5 text-gray-900'>Origin: {location.state.origin}</p>
+          <p className='mb-5 text-gray-900'>Tags: {location.state.tag}</p>
+
+          <div className='flex items-center'></div>
         </div>
-      </div> */}
-      <h1> hello world</h1>
-      <h1> Likes:{location.state.likes}</h1>
-      <h1> comments :{location.state.comments}</h1>
+      </div>
     </div>
   );
 };
