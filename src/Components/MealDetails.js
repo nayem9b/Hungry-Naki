@@ -52,8 +52,8 @@ const MealDetails = () => {
         </div>
       </div> */}
       <h1> hello world</h1>
-      {/* <h1> Likes:{location.state.likes}</h1>
-      <h1> comments :{location.state.comments}</h1> */}
+      <h1> Likes:{location.state.likes}</h1>
+      <h1> comments :{location.state.comments}</h1>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const CardForVegeterian = ({ vegeterian }) => {
       </NavLink> */}
       <button
         onClick={() => {
-          navigate(`gello`, {
+          navigate(`/vegetarian/${idMeal}`, {
             state: {
               likes: vegeterian.strMeal,
               comments: vegeterian.idMeal,

@@ -75,14 +75,23 @@ export const router = createBrowserRouter([
       //     ),
       // },
       {
-        path: `/vegetarian/${idMeal}`,
-        loader: async ({ params }) => {
-          return fetch(
-            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`
-          );
-        },
+        path: `/vegetarian/:idMeal`,
         element: <MealDetails></MealDetails>,
+        // loader: async ({ params }) => {
+        //   return fetch(
+        //     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`
+        //   );
+        // },
       },
+      // {
+      //   path: `/vegetarian/${idMeal}`,
+      //   loader: async ({ params }) => {
+      //     return fetch(
+      //       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`
+      //     );
+      //   },
+      //   element: <MealDetails></MealDetails>,
+      // },
 
       { path: "*", element: <Errorpage></Errorpage> },
     ],
