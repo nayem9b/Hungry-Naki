@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Onepiece = ({ beef }) => {
-  const { strMeal, strMealThumb, strInstructions } = beef;
+const CardForSeaFood = ({ seafood }) => {
+  const { strMeal, strMealThumb, strInstructions } = seafood;
   return (
     // <h1> hello</h1>
     <Link to={`../book/${strMeal}`} aria-label='View Item'>
@@ -13,9 +13,11 @@ const Onepiece = ({ beef }) => {
           alt=''
         />
         <div className='absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
-          <p className='mb-4 text-lg font-bold text-gray-100'>{beef.strMeal}</p>
+          <p className='mb-4 text-lg font-bold text-gray-100'>
+            {seafood.strMeal}
+          </p>
           {/* <p className='mb-4 text-lg font-bold text-gray-100'>
-            {chicken.strMeal}
+            {seafood.strMeal}
           </p> */}
           <br />
           <p className='text-sm tracking-wide text-gray-300'>
@@ -29,4 +31,4 @@ const Onepiece = ({ beef }) => {
   );
 };
 
-export default Onepiece;
+export default CardForSeaFood;

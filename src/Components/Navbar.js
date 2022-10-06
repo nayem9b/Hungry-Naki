@@ -10,7 +10,7 @@ const Navbar = () => {
             <NavLink
               to='/beef'
               aria-label='Home'
-              title='Home'
+              title='beef'
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -21,7 +21,7 @@ const Navbar = () => {
             <NavLink
               to='/chicken'
               aria-label='Home'
-              title='Home'
+              title='chicken'
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -32,7 +32,7 @@ const Navbar = () => {
             <NavLink
               to='/dessert'
               aria-label='Home'
-              title='Home'
+              title='dessert'
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -43,7 +43,7 @@ const Navbar = () => {
             <NavLink
               to='/seafood'
               aria-label='Home'
-              title='Home'
+              title='seafood'
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -54,7 +54,7 @@ const Navbar = () => {
             <NavLink
               to='/vegetarian'
               aria-label='Home'
-              title='Home'
+              title='vegetarian'
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -79,8 +79,15 @@ const Navbar = () => {
               viewBox='0 0 24 24'>
               <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
             </svg>
-            <span className='ml-3 text-xl'>Hungry Naki?</span>
+            <NavLink
+              to='/home'
+              aria-label='Home'
+              title='Hungry Naki?'
+              className='ml-3 text-xl'>
+              Hungry Naki?
+            </NavLink>
           </a>
+
           <div className='lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0'>
             <button className='inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
               <h1 className='text-lg text-orange-400'>Find Us</h1>
