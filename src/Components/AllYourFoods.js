@@ -40,7 +40,6 @@ const AllYourFoods = () => {
                 />
               </svg>
             </a> */}
-            <Testimonial></Testimonial>
           </div>
         </div>
         <div className='w-full mx-auto mt-20 text-center md:w-10/12'></div>

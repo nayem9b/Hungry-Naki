@@ -67,11 +67,11 @@ export const router = createBrowserRouter([
           fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=tomato"),
       },
       {
-        path: "meal/:id",
+        path: "meal/:idMeal",
         element: <MealDetails></MealDetails>,
         loader: ({ params }) =>
           fetch(
-            `https://www.themealdb.com/api/json/v1/1/search.php?s=${params.idMeal}`
+            `httpswww.themealdb.com/api/json/v1/1/lookup.php?i=/${params.idMeal}`
           ),
       },
 

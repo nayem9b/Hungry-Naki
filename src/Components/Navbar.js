@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import image from "./Navbar/icons8-pizza-96.png";
 
 const Navbar = () => {
   return (
@@ -68,22 +69,10 @@ const Navbar = () => {
             <a className='hover:text-gray-900'>Vegetarian</a> */}
           </nav>
           <a className='flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-10 h-10 text-white p-2 bg-yellow-500 rounded-full'
-              viewBox='0 0 24 24'>
-              <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
-            </svg>
-            <NavLink
-              to='/'
-              aria-label=''
-              title='Hungry Naki?'
-              className='ml-3 text-xl'>
+            <NavLink to='/' aria-label='' title=''>
+              <img className='' src={image} alt='' />
+            </NavLink>
+            <NavLink to='/' aria-label='' title='' className='ml-3 text-2xl'>
               Hungry Naki?
             </NavLink>
           </a>

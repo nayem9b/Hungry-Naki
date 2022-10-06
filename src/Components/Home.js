@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import AllYourFoods from "./AllYourFoods";
 import LoadedCatagories from "./LoadedCatagories";
 import { useLoaderData } from "react-router-dom";
+import Testimonial from "./Navbar/Testimonial";
 
 const Home = () => {
   const loaderData = useLoaderData();
@@ -20,9 +21,10 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96'>
+      {/* <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96'>
         <Lottie animationData={food} loop={true} />
-      </div>
+      </div> */}
+      <Testimonial></Testimonial>
     </div>
   );
 };
