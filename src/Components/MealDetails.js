@@ -1,18 +1,19 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { useParams } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 const MealDetails = () => {
-  const mealData = useLoaderData();
+  const location = useLocation();
+  // const mealData = useLoaderData();
   // const params = useParams();
   // const { strMealThumb, strMeal } = params;
 
-  const { strMealThumb, strMeal, strSource, strInstructions, strYoutube } =
-    mealData;
+  // const { strMealThumb, strMeal, strSource, strInstructions, strYoutube } =
+  //   mealData;
 
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-      <div className='flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto'>
+      {/* <div className='flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto'>
         <div className=' lg:w-1/2'>
           <img
             src={strMealThumb}
@@ -29,14 +30,14 @@ const MealDetails = () => {
           <h5 className='mb-3 text-3xl font-extrabold leading-none sm:text-4xl'>
             {strMeal}
           </h5>
-          {/* <p className='mb-5 text-gray-900'>
+          <p className='mb-5 text-gray-900'>
             Authors: {authors.substring(0, 50)}
           </p>
           <p className='mb-5 text-gray-900'>Publisher: {publisher}</p>
           <p className='mb-5 text-gray-900'>Year: {year}</p>
           <p className='mb-5 text-gray-900'>Rating: {rating}</p>
-          <p className='mb-5 text-gray-800'>{desc.substring(0, 150)}...</p> */}
-          {/* <div className='flex items-center'>
+          <p className='mb-5 text-gray-800'>{desc.substring(0, 150)}...</p>
+          <div className='flex items-center'>
             <a href={pdf && Object.values(pdf)[0]}>
               <button
                 type='submit'
@@ -47,9 +48,12 @@ const MealDetails = () => {
             <p className='inline-flex items-center font-semibold transition-colors duration-200 text-blue-400 hover:text-deep-purple-800'>
               Price: {price}
             </p>
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
+      <h1> hello world</h1>
+      {/* <h1> Likes:{location.state.likes}</h1>
+      <h1> comments :{location.state.comments}</h1> */}
     </div>
   );
 };
