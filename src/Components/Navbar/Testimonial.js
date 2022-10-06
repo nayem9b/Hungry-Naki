@@ -1,4 +1,6 @@
 import React from "react";
+import reshob from "../Reshob.jpg";
+import riyad from "../Riyad.jpg";
 
 const Testimonial = () => {
   return (
@@ -6,7 +8,7 @@ const Testimonial = () => {
       <section class='text-gray-600 body-font'>
         <div class='container px-5 py-24 mx-auto'>
           <h1 class='text-3xl font-medium title-font text-gray-900 mb-12 text-center'>
-            Testimonials
+            Hunger Story
           </h1>
           <div class='flex flex-wrap -m-4'>
             <div class='p-4 md:w-1/2 w-full'>
@@ -33,7 +35,7 @@ const Testimonial = () => {
                 <a class='inline-flex items-center'>
                   <div className='avatar'>
                     <div className='w-12 rounded-full'>
-                      <img src='https://placeimg.com/192/192/people' />
+                      <img src={reshob} />
                     </div>
                   </div>
                   <span class='flex-grow flex flex-col pl-4'>
@@ -67,16 +69,16 @@ const Testimonial = () => {
                   stores. Hope you compromise this feature in the future.
                 </p>
                 <a class='inline-flex items-center'>
-                  <img
-                    alt='testimonial'
-                    src='https://dummyimage.com/107x107'
-                    class='w-12 h-12 rounded-full flex-shrink-0 object-cover object-center'
-                  />
+                  <div className='avatar'>
+                    <div className='w-12 rounded-full'>
+                      <img src={riyad} />
+                    </div>
+                  </div>
                   <span class='flex-grow flex flex-col pl-4'>
                     <span class='title-font font-medium text-gray-900'>
-                      Alper Kamu
+                      Rafatul Islam
                     </span>
-                    <span class='text-gray-500 text-sm'>DESIGNER</span>
+                    <span class='text-gray-500 text-sm'>Student</span>
                   </span>
                 </a>
               </div>

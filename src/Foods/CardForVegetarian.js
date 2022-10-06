@@ -4,10 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const CardForVegeterian = ({ vegeterian }) => {
   const navigate = useNavigate();
-  const { courseid } = useParams();
+
   const { strMeal, strMealThumb, strInstructions, idMeal } = vegeterian;
   return (
-    // <h1> hello</h1>
     <div>
       <NavLink
         // to={`../${idMeal}`}
@@ -19,7 +18,6 @@ const CardForVegeterian = ({ vegeterian }) => {
               Category: vegeterian.strCategory,
               photo: vegeterian.strMealThumb,
               details: vegeterian.strInstructions,
-              youtube: vegeterian.strYoutube,
               tag: vegeterian.strTags,
               origin: vegeterian.strArea,
               main: vegeterian.strIngredient1,
@@ -36,9 +34,9 @@ const CardForVegeterian = ({ vegeterian }) => {
             <p className='mb-4 text-lg font-bold text-gray-100'>
               {vegeterian.strMeal}
             </p>
-            <p className='mb-4 text-lg font-bold text-gray-100'>
+            {/* <p className='mb-4 text-lg font-bold text-gray-100'>
               {vegeterian.strMeal}
-            </p>
+            </p> */}
             <br />
             <p className='text-sm tracking-wide text-gray-300'>
               {strInstructions}

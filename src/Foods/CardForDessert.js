@@ -6,7 +6,23 @@ const CardForDessert = ({ dessert }) => {
   const { strMeal, strMealThumb, strInstructions, idMeal } = dessert;
   return (
     <div>
-      <NavLink to={`../${idMeal}`} aria-label='View Item'>
+      <NavLink
+        // to={`../${idMeal}`}
+        onClick={() => {
+          navigate(`/vegetarian/${idMeal}`, {
+            state: {
+              mealName: dessert.strMeal,
+              Category: dessert.strCategory,
+              photo: dessert.strMealThumb,
+              details: dessert.strInstructions,
+              youtube: dessert.strYoutube,
+              tag: dessert.strTags,
+              origin: dessert.strArea,
+              main: dessert.strIngredient1,
+            },
+          });
+        }}
+        aria-label='View Item'>
         <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
           <img
             className='object-cover w-full h-56 md:h-64 xl:h-80'

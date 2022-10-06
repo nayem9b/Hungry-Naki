@@ -5,9 +5,24 @@ const CardForChicken = ({ chicken }) => {
   const navigate = useNavigate();
   const { strMeal, strMealThumb, strInstructions, idMeal } = chicken;
   return (
-    // <h1> hello</h1>
     <div>
-      <NavLink to={`../${idMeal}`} aria-label='View Item'>
+      <NavLink
+        // to={`../${idMeal}`}
+        onClick={() => {
+          navigate(`/vegetarian/${idMeal}`, {
+            state: {
+              mealName: chicken.strMeal,
+              Category: chicken.strCategory,
+              photo: chicken.strMealThumb,
+              details: chicken.strInstructions,
+              youtube: chicken.strYoutube,
+              tag: chicken.strTags,
+              origin: chicken.strArea,
+              main: chicken.strIngredient1,
+            },
+          });
+        }}
+        aria-label='View Item'>
         <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
           <img
             className='object-cover w-full h-56 md:h-64 xl:h-80'
