@@ -9,6 +9,8 @@ import Chicken from "../Foods/Chicken";
 import Vegeterian from "../Foods/Vegeterian";
 import Dessert from "../Foods/Dessert";
 import Seafood from "../Foods/Seafood";
+import FindUs from "./Navbar/FindUs";
+import MealDetails from "./MealDetails";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +21,8 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () =>
+          fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
       },
       {
         path: "home",
@@ -27,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <About></About>,
+      },
+      {
+        path: "findus",
+        element: <FindUs></FindUs>,
       },
       {
         path: "beef",
@@ -59,11 +67,14 @@ export const router = createBrowserRouter([
           fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=tomato"),
       },
       {
-        path: "foods",
-        element: <loadedCatagories></loadedCatagories>,
-        loader: () =>
-          fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
+        path: "meal/:id",
+        element: <MealDetails></MealDetails>,
+        loader: ({ params }) =>
+          fetch(
+            `https://www.themealdb.com/api/json/v1/1/search.php?s=${params.idMeal}`
+          ),
       },
+
       { path: "*", element: <Errorpage></Errorpage> },
     ],
   },
