@@ -15,7 +15,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
               }>
               Beef
             </NavLink>
@@ -26,7 +26,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
               }>
               Chicken
             </NavLink>
@@ -37,7 +37,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  : "font-medium  mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium  mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
               }>
               Dessert
             </NavLink>
@@ -48,7 +48,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
               }>
               Sea Food
             </NavLink>
@@ -59,7 +59,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-medium mr-5 tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  : "font-medium mr-5 tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-orange-400"
               }>
               Vegetarian
             </NavLink>
@@ -72,7 +72,11 @@ const Navbar = () => {
             <NavLink to='/' aria-label='' title=''>
               <img className='' src={image} alt='' />
             </NavLink>
-            <NavLink to='/' aria-label='' title='' className='ml-3 text-2xl'>
+            <NavLink
+              to='/'
+              aria-label=''
+              title=''
+              className='ml-3 text-2xl hover:text-orange-400'>
               Hungry Naki?
             </NavLink>
           </a>
@@ -82,9 +86,9 @@ const Navbar = () => {
               <NavLink
                 to='/findus'
                 aria-label=''
-                title='Hungry Naki?'
-                className='ml-3 text-xl'>
-                Find US
+                title=''
+                className='ml-3 text-xl text-orange-400'>
+                Find Us
               </NavLink>
               <svg
                 fill='none'

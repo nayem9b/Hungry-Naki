@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Testimonial from "./Navbar/Testimonial";
 
 const AllYourFoods = () => {
@@ -7,23 +8,28 @@ const AllYourFoods = () => {
       <section className='px-4 py-24 mx-auto max-w-7xl'>
         <div className='w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center'>
           <h1 className='mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight'>
-            All your{" "}
+            All your <br />
             <span className='block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline'>
-              Favourite foods
+              Favourite foods <br />
             </span>{" "}
             in one single place.
           </h1>
-          <p className='px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24'>
-            Hellonext is a feature voting software where you can allow your
-            users to vote on features, publish roadmap, and complete your
-            customer feedback loop.
+          <p className='px-0 mb-6 text-lg text-gray-600 md:text-lg text-center lg:px-24'>
+            Feeling hunger while busy in work? <br /> Your favourite food is
+            just a few taps away. Use our{" "}
+            <span className='text-orange-400 text-xl font-bold italic'>
+              Hungry Naki
+            </span>{" "}
+            app to taste a delicious experience
           </p>
           <div className='mb-4 space-x-0 md:space-x-2 md:mb-8'>
-            <a
-              className='inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0 bg-orange-400'
-              href='#'>
+            <NavLink
+              to='/beef'
+              aria-label=''
+              title=''
+              className='inline-flex items-center justify-center w-full mb-2 btn border-none btn-lg sm:w-auto sm:mb-0 text-white bg-orange-400 hover:text-black hover:bg-orange-400'>
               Feeling Hungry?
-            </a>
+            </NavLink>
             {/* <a
               className='inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0'
               href='#'>
